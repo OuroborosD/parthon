@@ -1,7 +1,13 @@
 import eel
+import os
 from random import randint as num
 
-eel.init(r'C:\Users\snr\OneDrive\Documentos\Estudo\Programacao\2-DESKTOP\03-Python\04-eel\parthon\web')  
+path = os.path.dirname(os.path.realpath(__file__))
+static = 'web'
+path = os.path.join(path,static)
+print(f' path é {path}')
+
+eel.init(path)  
   
 # Exposing the random_python function to javascript
 @eel.expose    
