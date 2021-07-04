@@ -1,6 +1,7 @@
 import eel
 import os
 from random import randint as num
+import funcoes
 
 path = os.path.dirname(os.path.realpath(__file__))
 static = 'web'
@@ -33,7 +34,11 @@ def gerador_cpf(estado = 10,  controle = 0, digitos = 0):
         controle += 1 #incremento para sair o while.
         incremento = 1
     return digitos
-    
+
+@eel.expose
+def chamar_juntarnome():    
+    nome = funcoes.juntar_nomes()
+    return nome
   
 # Start the index.html file
 eel.start("index.html")
