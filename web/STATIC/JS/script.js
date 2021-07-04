@@ -1,15 +1,13 @@
-document.querySelector("div").onclick = function () {  
-    // Call python's random_python function
-    eel.gerador_cpf()(function(valor_cpf){ // o valor_cpf é quem recebe o valor do return                      
-      // Update the div with a random number returned by python
-      document.querySelector(".cpf").innerHTML = valor_cpf;
+document.querySelector(".moldura").onclick = function () {  
+    eel.get_gerador_cpf()(function(valor_cpf){ // o valor_cpf é quem recebe o valor do return                      
+
+      let tamanho = String(valor_cpf).length
+      console.log(tamanho)
+      document.querySelector(".cpf").innerHTML = (`${valor_cpf} : ${tamanho}`);
     })
 
-    eel.chamar_juntarnome()(function(nome){
-      console.log(nome.length)
-      if(nome.length > 20){
-        document.querySelector("p").style.fontSize = 14;
-      }
+    eel.get_juntarnome()(function(nome){
+      
       document.querySelector(".nome").innerHTML = nome;
     })
   }
