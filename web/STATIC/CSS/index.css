@@ -1,0 +1,45 @@
+html{
+    text-transform: capitalize;
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg,#e66465, #9198e5) no-repeat;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.24);
+    padding: 24px;
+    border-radius: 200px;
+
+}
+
+.moldura{
+    
+}
+
+img{
+    border-radius: 200px;
+    height: 100px;  
+}
+
+.dados{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    justify-content: space-between;
+}
+
+p{
+    font-size: 22px;
+    padding: 12px;
+}

@@ -5,7 +5,7 @@ eel.init(r'C:\Users\snr\OneDrive\Documentos\Estudo\Programacao\2-DESKTOP\03-Pyth
   
 # Exposing the random_python function to javascript
 @eel.expose    
-def gerador_cpf(estado = 10,  controle = 0):
+def gerador_cpf(estado = 10,  controle = 0, digitos = 0):
     
     if estado != 10:
         return "em construção"
