@@ -2,7 +2,8 @@
 
 ## GUI feita com a biblioteca [Eel.](https://github.com/ChrisKnott/Eel)
 
-![Interface](https://github.com/OuroborosD/parthon/tree/main/web/STATIC/IMG/interface-v1.png)
+![Interface](https://github.com/OuroborosD/parthon/blob/main/web/STATIC/IMG/interface-v1.PNG)
+
 
 - [X] criar a interface grafica. 
 - [X] função para gerar os nomes
