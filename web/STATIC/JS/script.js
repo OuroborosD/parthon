@@ -7,8 +7,13 @@ document.querySelector(".moldura").onclick = function () {
     })
 
     eel.get_juntarnome()(function(nome){
-      
       document.querySelector(".nome").innerHTML = nome;
+      if(nome.length > 20){
+        document.getElementById("nome").style.fontSize = "16px";
+      }else{
+        document.getElementById("nome").style.fontSize = "20px";
+      }
+      
     })
 
     eel.get_idade()(function(idade){

@@ -10,6 +10,6 @@
 - [X] função para gerar a idade, data de nascimento.
 - [X] função para gerar o sexo.
 - [X] função para gerar o cpf.
-- [ ] gerar um pdf com dada da pessoas
+- [ ] gerar um pdf com dads da pessoa
 - [ ] gerar dados massivamente, e exportar como sql.
 
