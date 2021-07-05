@@ -19,6 +19,16 @@ def get_gerador_cpf():
 def get_juntarnome():    
     nome = funcoes.juntar_nomes()
     return nome
+
+@eel.expose
+def get_idade():
+    nascimento = funcoes.gerar_idade()
+    return nascimento
   
+@eel.expose
+def get_sexo():
+    sexo = funcoes.gerar_sexo()
+    return sexo
+
 # Start the index.html file
 eel.start("index.html")

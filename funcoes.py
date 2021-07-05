@@ -1,4 +1,5 @@
 from random import randint as r
+import datetime
 
 def gerador_cpf(estado = 10,  controle = 0, digitos = 0):
     
@@ -83,8 +84,58 @@ def juntar_nomes():
     
     nome_completo = nome_completo.lstrip()#apagar o ultimo espaço
     return nome_completo
+
+
     
-for i in range(60):
-    gerador_cpf()
-    print(f'vez {i}')
+def gerar_nacimento():
+    ano =str(r(1920,2020))
+    mes =str(r(1,12))
+    mes = mes.zfill(2)# preenche com 0, caso só tenha um digito.
+    dia = str(r(1,31))
+    dia = dia.zfill(2)
+    nascimento = f'{dia}/{mes}/{ano}'
+    return nascimento
+    
+
+
+
+
+
+def gerar_idade():
+    """recebe a data de nascimento e calcula a idade.
+
+    Returns:
+        lista: contem lista[0] = data de nascimento
+                      lista[1] = idade
+    """
+    nasceu = gerar_nacimento()   
+    agora = datetime.datetime.now().strftime('%d/%m/%Y')
+    idade = 0
+    idade_info = []
+    idade_info.append(nasceu)
+    if int(nasceu[6:10]) <= int(agora[6:10]):
+        
+        if int(nasceu[3:5]) > int(agora[3:5]) and int(nasceu[6:10]) > int(agora[6:10]):
+                return 'nascimento maior que a data atual: in'
+        
+        elif int(nasceu[3:5]) <= int(agora[3:5]) and int(nasceu[6:10]) < int(agora[6:10]) or  int(nasceu[3:5]) >= int(agora[3:5]) and int(nasceu[6:10]) < int(agora[6:10]) :
+                idade = int(agora[6:10])  -  int(nasceu[6:10])  
+                
+        
+        
+        else:
+        
+                idade = (int(agora[3:5]) + 11)  -  int(nasceu[3:5])
+                idade = f'{idade} meses'
+        
+        idade_info.append(idade)
+        return idade_info
+        
+    return 'nascimento maior que  a data atual'
+
+def gerar_sexo():
+    sexos = ['f','m']
+    escolha = r(0,1)
+    return sexos[escolha]
+
 
